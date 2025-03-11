@@ -41,7 +41,6 @@ spec:
       name: disk-ssd
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "standard"
       resources:
         requests:
           storage: 2Gi
