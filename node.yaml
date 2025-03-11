@@ -6,7 +6,7 @@ metadata:
   labels:
     app: node
 spec:
-  replicas: 2
+  replicas: 3 
   selector:
     matchLabels:
       app: node
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: node
-          image: node-docker-demo
+          image: igbedo/node-docker-demo
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
