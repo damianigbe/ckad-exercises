@@ -1,12 +1,11 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet 
 metadata:
   labels:
     app: green 
   name: blue 
   namespace: ckad
 spec:
-  replicas: 10
   selector:
     matchLabels:
       app: green
