@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: backup-cronjob
+spec:
+  schedule: "0 0 * * *"  # Run at midnight every day
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: nginx
+              image: backup-image
+              command: ["/bin/sh", "-c", "backup.sh"]
+          restartPolicy: OnFailure
+
