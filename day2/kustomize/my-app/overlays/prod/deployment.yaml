@@ -1,0 +1,13 @@
+# overlays/prod/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 5  # Increase replicas for the prod environment
+  template:
+    spec:
+      containers:
+        - name: my-app
+          image: nginx:latest  # Use the latest production image
+

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: capability-pod
+spec:
+  containers:
+  - name: capability-container
+    image: nginx
+    securityContext:
+      capabilities:
+        add:
+        - NET_ADMIN
+

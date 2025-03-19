@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-token
+spec:
+  serviceAccountName: my-service-account
+  containers:
+  - name: my-container
+    image: nginx
+    command: ["cat", "/var/run/secrets/kubernetes.io/serviceaccount/token"]
+

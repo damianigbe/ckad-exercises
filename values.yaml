@@ -1,7 +1,0 @@
-architecture: "replication"
-
-auth:
-  user: "user"
-  rootPassword: "newRootPassword123"
-  password: "newUserPassword123"
-  replicationPassword: "newReplicationPassword123"
